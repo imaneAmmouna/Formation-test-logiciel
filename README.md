@@ -18,7 +18,7 @@ Ce projet s'inscrit dans le cadre de ma formation en test logiciel et vise à ap
 3️⃣ **Mise en place du processus de test**  
 - Application des bonnes pratiques et méthodologies de test logiciel.  
 - Schéma du processus de test :  
-  ![Schéma du processus de test](-processus-de-test.png)
+  ![Schéma du processus de test](processus-de-test.png)
 
 4️⃣ **Gestion des tests**  
 - Utilisation d'outils de gestion des tests tels que TestRail, TestLink et XRay pour assurer une organisation efficace des cas de test et leur suivi.
