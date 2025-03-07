@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20240525 22:56:22.822" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="C:\Users\IMANE\Desktop\Formation_Testing_QA\test_automatisé_robot\test.robot">
+<test id="s1-t1" name="Run Tests" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>edge</arg>
+<arg>executable_path=${EDGE_DRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240525 22:56:23.026" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg timestamp="20240525 22:56:23.026" level="INFO">Opening browser 'edge' to base url 'https://accounts.lambdatest.com/login?_gl=1*kscq4z*_gcl_au*MTA2ODc1OTI4Ny4xNjk1NzMyOTM3'.</msg>
+<status status="PASS" starttime="20240525 22:56:23.026" endtime="20240525 22:57:09.224"/>
+</kw>
+<kw name="Read Table From CSV">
+<var>${data}</var>
+<arg>${CSV_FILE}</arg>
+<arg>header=True</arg>
+<msg timestamp="20240525 22:57:09.229" level="FAIL">No keyword with name 'Read Table From CSV' found.</msg>
+<status status="FAIL" starttime="20240525 22:57:09.229" endtime="20240525 22:57:09.229"/>
+</kw>
+<kw name=":FOR">
+<arg>${row}</arg>
+<arg>IN</arg>
+<arg>@{data}</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.230" endtime="20240525 22:57:09.231"/>
+</kw>
+<kw name="\">
+<arg>${email}=</arg>
+<arg>Set Variable</arg>
+<arg>${row.email}</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.231" endtime="20240525 22:57:09.231"/>
+</kw>
+<kw name="\">
+<arg>${password}=</arg>
+<arg>Set Variable</arg>
+<arg>${row.password}</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.232" endtime="20240525 22:57:09.232"/>
+</kw>
+<kw name="\">
+<arg>Log</arg>
+<arg>\nStarting test with email: ${email} and password: ${password}</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.232" endtime="20240525 22:57:09.232"/>
+</kw>
+<kw name="\">
+<arg>${result}=</arg>
+<arg>Run Test Keyword And Return Status</arg>
+<arg>${email}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.233" endtime="20240525 22:57:09.233"/>
+</kw>
+<kw name="\">
+<arg>Run Keyword If</arg>
+<arg>'${result}' == 'PASS'</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.233" endtime="20240525 22:57:09.233"/>
+</kw>
+<kw name="\">
+<arg>...</arg>
+<arg>Log</arg>
+<arg>Test Passed</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.234" endtime="20240525 22:57:09.234"/>
+</kw>
+<kw name="\">
+<arg>...</arg>
+<arg>ELSE</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.234" endtime="20240525 22:57:09.234"/>
+</kw>
+<kw name="\">
+<arg>...</arg>
+<arg>Log</arg>
+<arg>Test Failed</arg>
+<status status="NOT RUN" starttime="20240525 22:57:09.234" endtime="20240525 22:57:09.234"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20240525 22:57:09.234" endtime="20240525 22:57:09.234"/>
+</kw>
+<doc>Run login tests with credentials from CSV</doc>
+<status status="FAIL" starttime="20240525 22:56:23.026" endtime="20240525 22:57:09.234">No keyword with name 'Read Table From CSV' found.</status>
+</test>
+<status status="FAIL" starttime="20240525 22:56:22.822" endtime="20240525 22:57:09.235"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240525 22:56:23.026" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>
